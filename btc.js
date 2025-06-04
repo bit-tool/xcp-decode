@@ -132,6 +132,27 @@ function decodeOutputScript(script) {
             };
         }
         
+        // Check if it's an OP_RETURN script (OP_RETURN <data>)
+        if (script.length >= 1 && script[0] === 0x6a) { // OP_RETURN
+            // The rest is pushdata (if any)
+            let data = null;
+            if (script.length > 1) {
+                // Try to decompile to get the data
+                try {
+                    const chunks = bitcoin.script.decompile(script);
+                    // chunks[0] is OP_RETURN, the rest are data pushes
+                    data = chunks.slice(1).map(chunk => Buffer.isBuffer(chunk) ? chunk.toString('hex') : chunk);
+                } catch (e) {
+                    data = script.slice(1).toString('hex');
+                }
+            }
+            return {
+                type: 'OP_RETURN',
+                data: data,
+                script: script.toString('hex')
+            };
+        }
+        
         // If not a recognized script type, return just the script
         return {
             type: 'unknown',
