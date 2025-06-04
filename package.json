@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bech32": "^2.0.0",
-    "bitcoinjs-lib": "^6.1.5"
+    "bitcoinjs-lib": "^6.1.5",
+    "chalk": "^5.4.1"
   }
 }
