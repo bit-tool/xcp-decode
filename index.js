@@ -94,6 +94,7 @@ try {
         console.log('Amount: ' + chalk.blue(formatAmount(c.amount)));
         console.log(chalk.gray('--------------------------------'));
     });
+    console.log(txHex);
 } catch (error) {
     console.error(chalk.red(`Error: ${error.message}`));
     process.exit(1);

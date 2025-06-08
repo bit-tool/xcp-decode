@@ -27,3 +27,9 @@ npx xcp-decode <transaction_hex>
 ```bash
 node index.js <transaction_hex>
 ```
+
+## Create offline package
+
+```bash
+npm i && zip -r ../xcp-decode.zip . -x ".git*" -x "data*"
+```

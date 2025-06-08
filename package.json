@@ -1,14 +1,14 @@
 {
   "name": "xcp-decode",
   "version": "0.1.0",
-  "description": "Counterparty transaction decoder",
-  "homepage": "https://github.com/tians-bitgc/xcp-decode#readme",
+  "description": "Counterparty Transaction Decoder",
+  "homepage": "https://github.com/bit-tool/xcp-decode#readme",
   "bugs": {
-    "url": "https://github.com/tians-bitgc/xcp-decode/issues"
+    "url": "https://github.com/bit-tool/xcp-decode/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/tians-bitgc/xcp-decode.git"
+    "url": "git+ssh://git@github.com/bit-tool/xcp-decode.git"
   },
   "license": "ISC",
   "author": "TS",
