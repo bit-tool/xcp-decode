@@ -97,7 +97,7 @@ function parseInput(input) {
     } else {
         hex = data;
     }
-    return { hex, signer };
+    return { hex, signer, raw: data };
 }
 
 try {
@@ -116,7 +116,7 @@ try {
         console.log('Amount: ' + chalk.blue(formatAmount(c.amount)));
         console.log(chalk.gray('--------------------------------'));
     });
-    console.log(data.hex);
+    console.log(data.raw);
 } catch (error) {
     console.error(chalk.red(`Error: ${error.message}`));
     process.exit(1);
